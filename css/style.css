@@ -1,0 +1,192 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #ff6347;
+    --secondary-color: #f0f0f0;
+}
+
+/* BEM: .block__element--modifier */
+.nav {
+    background-color: var(--primary-color);
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.banner {
+    background: url('../img/a2.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+.banner h1 {
+    font-size: 3rem;
+}
+
+.productos-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .productos-lista {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+.imagen img {
+    width: 70%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.imagen img:hover {
+    transform: scale(1.1);
+}
+
+.imagen p {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 5px;
+    color: var(--primary-color);
+}
+
+.productos-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.producto {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto img:hover {
+    transform: scale(1.05);
+}
+
+.producto p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+/* Estilos Generales del Formulario de Contacto */
+.contact {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilos para las etiquetas y entradas */
+.contact-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+/* Estilo para el botón de enviar */
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #66afe9;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #5a98c0;
+}
+
+/* Estilo para el mensaje de éxito o error */
+.contact-form .status-message {
+    font-size: 1rem;
+    color: #d9534f;
+    display: none;
+}
+
+.contact-form .status-message.success {
+    color: #5bc0de;
+}
+
+
+

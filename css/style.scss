@@ -1,0 +1,66 @@
+/* Variables */
+$primary-color: #ff6347;
+$secondary-color: #f0f0f0;
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BEM: .block__element--modifier */
+.nav {
+    background-color: $primary-color;
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    li {
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+    }
+}
+
+.banner {
+    background: url('../img/banner.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+    color: white;
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+.productos-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .productos-lista {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+
